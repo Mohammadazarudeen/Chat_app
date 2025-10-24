@@ -4,7 +4,7 @@ import axios from "axios";
 
 const socket = io("http://localhost:5000");
 
-export default function Chat({ user }) {
+export default function Chat({ user, onLogout }) {
   if (!user) return <h3>Loading user...</h3>; 
 
   const [users, setUsers] = useState([]);
@@ -47,7 +47,7 @@ export default function Chat({ user }) {
   return (
     <div style={{ display: "flex", padding: "2rem", height: "100vh",}}>
       {/* User list */}
-      <div style={{ width: "200px", borderRight: "1px solid gray" }}>
+      <div style={{ width: "250px", borderRight: "1px solid gray" }}>
         <h3>Users</h3>
         {users.map((u) => (
           <div
@@ -69,6 +69,7 @@ export default function Chat({ user }) {
         {receiver ? (
           <>
             <h3>Chating with {receiver.username}</h3>
+            <button onClick={onLogout} style={{backgroundColor:"red",marginBottom:"7px"}}>Logout</button>
             <div
               style={{
                 height: "500px",
@@ -109,6 +110,7 @@ export default function Chat({ user }) {
           <h4>Select a user to chat</h4>
         )}
       </div>
+      
     </div>
   );
 }

@@ -19,9 +19,9 @@ export default function Login({ setToken, setUser }) {
 
   return (
     <div>
-      <h3>Login</h3>
-      <input placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} /><br />
-      <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} /><br />
+      <h3 style={{fontSize:"30px"}}>Login</h3>
+      <input placeholder="Email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} style={{width:"250px", marginBottom:"7px",height:"25px"}} /><br />
+      <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} style={{width:"250px",marginBottom:"15px",height:"25px"}} /><br />
       <button onClick={handleLogin}>Login</button>
     </div>
   );

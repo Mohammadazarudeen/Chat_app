@@ -17,10 +17,10 @@ export default function Register() {
 
   return (
     <div>
-      <h3>Register</h3>
-      <input placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} /><br />
-      <input placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} /><br />
-      <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} /><br />
+      <h3 style={{fontSize:"30px"}}>Register</h3>
+      <input placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} style={{width:"250px",marginBottom:"7px",height:"25px"}} /><br />
+      <input placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} style={{width:"250px", marginBottom:"7px",height:"25px"}}/><br />
+      <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} style={{width:"250px",marginBottom:"15px",height:"25px" }} /><br />
       <button onClick={handleRegister}>Register</button>
     </div>
   );

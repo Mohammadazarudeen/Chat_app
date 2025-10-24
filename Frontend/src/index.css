@@ -54,6 +54,23 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+input{
+  border-radius: 8px;
+  border: 1px solid #444;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  color: #fff;
+  border: none;
+}
+input:focus{
+  outline: 1px auto -webkit-focus-ring-color;
+  border-color: #4a51e7;
+}
+input::placeholder{
+  color: #888;
+}
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

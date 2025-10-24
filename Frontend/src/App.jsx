@@ -9,6 +9,13 @@ export default function App() {
     localStorage.getItem("user") ? JSON.parse(localStorage.getItem("user")) : null
   );
 
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    localStorage.removeItem("user");
+    setToken(null);
+    setUser(null);
+  }
+
   if (!token || !user)
     return (
       <div style={{ padding: "2rem" }}>
@@ -17,5 +24,5 @@ export default function App() {
       </div>
     );
 
-  return <Chat user={user} />;
+  return <Chat user={user} onLogout={handleLogout} />;
 }
